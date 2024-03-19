@@ -1,16 +1,15 @@
-
-
 function main(){
-    let user_choice = get_user_choice();
-    let pc_choise = get_pc_choice();
-    check_the_winner(user_choice,pc_choise)
+    while (true) {
+        let user_choice = get_user_choice();
+        let pc_choise = get_pc_choice();
+        check_the_winner(user_choice,pc_choise)
+    }
+    
 }
 
 function get_user_choice(){
-    let choice = prompt('Rock\nPaper\nScissor\n(q to exit):');
-    if (choice == 'q' || choice == 'Q'){
-        return choice.toLowerCase();
-    }
+    let choice = prompt('Rock\nPaper\nScissor\n (perss cancel to exit) :');
+    return choice.toLowerCase();
 }
 function get_pc_choice(){
     const choice = ['rock' ,'paper','scissor'];
