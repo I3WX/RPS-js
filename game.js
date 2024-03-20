@@ -35,7 +35,7 @@ function check_the_winner(user_choice , pc_choise){
         draw += 1;
     }
     else if (user_choice == 'rock' && pc_choise == 'scissor'){
-        alert("your rock beat pc's paper 🎉🎉");
+        alert("your rock beat pc's scissor 🎉🎉");
         user_win += 1; 
     }
     else if (user_choice == 'paper' && pc_choise == 'rock'){
