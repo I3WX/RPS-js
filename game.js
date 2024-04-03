@@ -3,16 +3,28 @@ pc_win = 0 ;
 draw = 0
 function main(){
     while (true) {
-        let user_choice = get_user_choice();
-        if (user_choice == "q"){
-            break
-        }
-        else if(user_choice == "rock" || user_choice == "paper" || user_choice == "scissor"){
-            let pc_choise = get_pc_choice();
-            check_the_winner(user_choice,pc_choise);
+        if(pc_win == 5 || user_win == 5){
+            if (pc_win==5){
+                alert("pc win the match"); 
+                break
+            }
+            else{
+                alert("pc win the match"); 
+                break
+            }
         }
         else{
-            alert("Invalid input\Try again....")
+            let user_choice = get_user_choice();
+            if (user_choice == "q"){
+                break
+            }
+            else if(user_choice == "rock" || user_choice == "paper" || user_choice == "scissor"){
+                let pc_choise = get_pc_choice();
+                check_the_winner(user_choice,pc_choise);
+            }
+            else{
+                alert("Invalid input\Try again....")
+            }
         }
     }
     alert(`You won : ${user_win}\nPc won : ${pc_win}\n Draw : ${draw}`)
