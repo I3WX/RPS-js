@@ -1,19 +1,9 @@
 user_win = 0;
 pc_win = 0 ;
-draw = 0
+draw = 0;
+matchPlayed = 0;
 function main(){
-    while (true) {
-        if(pc_win == 5 || user_win == 5){
-            if (pc_win==5){
-                alert("pc win the match"); 
-                break
-            }
-            else{
-                alert("pc win the match"); 
-                break
-            }
-        }
-        else{
+    while (matchPlayed <= 5) {
             let user_choice = get_user_choice();
             if (user_choice == "q"){
                 break
@@ -25,11 +15,10 @@ function main(){
             else{
                 alert("Invalid input\Try again....")
             }
+        matchPlayed += 1;
         }
-    }
     alert(`You won : ${user_win}\nPc won : ${pc_win}\n Draw : ${draw}`)
-}
-
+    }
 function get_user_choice(){
     let choice = prompt('Rock\nPaper\nScissor\n (enter q to exit) :');
     return choice.toLowerCase();
